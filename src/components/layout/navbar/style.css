@@ -40,3 +40,22 @@
     width: auto;
     height: 65%;
 }
+
+@media screen and (max-width: 1150px) {
+    .ui-nav-bar {
+        height: 80px;
+        padding: 0px 20px;
+    }
+
+    .ui-nav-bar-logo {
+        font-size: 1rem;
+    }
+
+    .ui-nav-bar-search {
+        width: auto;
+    }
+
+    .ui-nav-bar-profile {
+        display: none;
+    }
+}

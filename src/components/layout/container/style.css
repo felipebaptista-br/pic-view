@@ -7,3 +7,9 @@
 .ui-container-auto-width-size {
     width: 1150px;
 }
+
+@media screen and (max-width: 1150px) {
+    .ui-container-auto-width-size {
+        width: 100%;
+    }
+}

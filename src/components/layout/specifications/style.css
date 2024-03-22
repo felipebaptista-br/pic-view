@@ -54,3 +54,23 @@
     align-items: center;
     justify-content: center;
 }
+
+@media screen and (max-width: 1150px) {
+    .ui-specifications {
+        padding: 30px 20px;
+    }
+
+    .ui-specifications-background {
+        width: 100%;
+    }
+
+    .ui-specifications-content {
+        width: 100%;
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+
+    .ui-specifications-content p {
+        width: 100%;
+    }
+}
