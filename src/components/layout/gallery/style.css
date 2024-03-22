@@ -1,0 +1,46 @@
+.ui-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0;
+    gap: 25px;
+}
+
+.ui-gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.ui-gallery-grid-item {
+    user-select: none;
+    cursor: pointer;
+    width: 100%;
+    height: 350px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.ui-gallery-grid-item:hover {
+    transition: .3s;
+    scale: 1.04;
+}
+
+.ui-gallery-grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ui-gallery-loader {
+    margin-top: 50px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ui-gallery-nothing-found {
+    justify-content: center;
+    height: 500px;
+}

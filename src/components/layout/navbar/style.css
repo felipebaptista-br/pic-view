@@ -1,0 +1,42 @@
+.ui-nav-bar {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    background-color: var(--background-secondary);
+    border-bottom: 1px solid var(--background-keyboard);
+}
+
+.ui-nav-bar-content {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ui-nav-bar-logo {
+    color: var(--content-sub-primary);
+    user-select: none;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+}
+
+.ui-nav-bar-logo-span {
+    color: var(--accent-primary);
+}
+
+.ui-nav-bar-search {
+    width: 500px;
+}
+
+.ui-nav-bar-profile {
+    cursor: pointer;
+    user-select: none;
+    width: auto;
+    height: 65%;
+}

@@ -1,0 +1,15 @@
+
+.ui-input {
+    padding: 10px 15px;
+    font-size: 1rem;
+    background: var(--background-primary);
+    border: 2px solid var(--content-border);
+    border-radius: 10px;
+    color: var(--content-secondary);
+}
+
+.ui-input:focus {
+    outline: none;
+    border: 2px solid var(--accent-primary) !important;
+    color: var(--content-primary);
+}

@@ -1,11 +1,83 @@
+:root {
+  /* 
+    Design Systems 
+    KOS UI
+
+    UI Content
+  */
+  --content-constant: #FFFFFF;
+  --content-primary: #212529;
+  --content-sub-primary: rgba(33, 37, 41, 0.72);
+  --content-secondary: rgba(33, 37, 41, 0.52);
+  --content-disabled: rgba(33, 37, 41, 0.28);
+  --content-border: rgba(33, 37, 41, 0.12);
+  --content-background: rgba(33, 37, 41, 0.04);
+
+  /* 
+    UI Accent
+  */
+  --accent-primary: #2A83F2;
+  --accent-sub-primary: rgba(42, 131, 242, 0.72);
+  --accent-secondary: rgba(42, 131, 242, 0.52);
+  --accent-disabled: rgba(42, 131, 242, 0.28);
+  --accent-border: rgba(42, 131, 242, 0.2);
+  --accent-background: rgba(42, 131, 242, 0.12);
+
+  /* 
+    UI System
+  */
+  --system-success-primary: #24CE9F;
+  --system-success-background: rgba(36, 206, 159, 0.16);
+  --system-error-primary: #F22A41;
+  --system-error-background: rgba(242, 42, 65, 0.16);
+  --system-warning-primary: #F2B325;
+  --system-warning-background: rgba(242, 179, 37, 0.16);
+
+  /* 
+    UI Background
+  */
+  --background-primary: #FFFFFF;
+  --background-secondary: #F7F8FA;
+  --background-modal: #FFFFFF;
+  --background-keyboard: #D8E0EB;
+  --overlay-dark: rgba(33, 37, 41, 0.72);
+  --overlay-light: rgba(33, 37, 41, 0.52);
+
+  /* 
+    UI Colors
+  */
+  --red: #F34257;
+  --green: #24CE9F;
+  --purple: #8C8CFF;
+  --orange: #F3BD3D;
+  --blue: #2A83F2;
+}
+
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-primary);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--accent-secondary);
+}
+
+::selection {
+  color: var(--background-primary);
+  background: var(--content-primary);
+}
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
-
-body {
-
-}
-
