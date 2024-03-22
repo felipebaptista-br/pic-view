@@ -1,19 +1,24 @@
 'use client'
 
+// Importação de todas as bibliotecas
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { getPictures } from '@/api/images-endpoints';
 import { Button, Container, Loader } from '@/components';
+import { Picture } from '@/@types/picture';
 import Image from 'next/image';
 import SadIcon from '@/assets/icons/sad.svg';
 
 import './style.css';
 
+// Definindo o componente Principal que será exportado.
 const Root = ({ query }: { query?: string }) => {
+    // Declaração de estados do Componente.
     const [currentPage, setCurrentPage] = useState(1);
-    const [pictures, setPictures] = useState([] as any);
+    const [pictures, setPictures] = useState([] as Picture[]);
 
     useEffect(() => {
+        // Fazendo a requisição de todas as imagens da API e armazenando em um estado para renderização. Sempre que a query for alterada, a requisição é feita novamente.
         const fetchPictures = async () => {
             const response = await getPictures({ query: query, page: currentPage, perPage: 10 });
             setPictures(response);
@@ -22,12 +27,14 @@ const Root = ({ query }: { query?: string }) => {
         fetchPictures();
     }, [query]);
 
+    // Função que faz a requisição de novas imagens da API e adiciona as novas imagens ao estado de acordo com o evento de clique.
     const handleClickNewPictures = async () => {
         const newPicturesByApi = await getPictures({ page: currentPage + 1, query: query, perPage: 10 });
         setCurrentPage(currentPage + 1);
         setPictures([...pictures, ...newPicturesByApi]);
     }
 
+    // Verificação da chamada da API, caso ainda não chamada e respondida, o componente Loading é renderizado.
     if (pictures.length === 0) {
         return (
             <Container.Root>
@@ -38,6 +45,7 @@ const Root = ({ query }: { query?: string }) => {
         )
     };
 
+    // Verificação se existem imagens para renderizar, caso existam, o componente GalleryGrid é renderizado.
     if (pictures.length > 0) {
         return (
             <Container.Root>
@@ -51,6 +59,7 @@ const Root = ({ query }: { query?: string }) => {
         )
     };
 
+    // Caso a consulta seja vazia, o componente GalleryNotFound e renderizado apresentando ao usuário a inexistência de conteúdos.
     return (
         <Container.Root>
             <Container.AutoWidthSize className='ui-gallery ui-gallery-nothing-found'>
@@ -61,6 +70,7 @@ const Root = ({ query }: { query?: string }) => {
     );
 };
 
+// Definindo os componentes secundários, que serão renderizados dentro do componente Root, o GalleryGrid é um componente interno de Gallery e só é chamado quando encontradas imagens.
 const GalleryGrid = ({ pictures }: { pictures: any }) => {
     const router = useRouter();
 
@@ -75,8 +85,10 @@ const GalleryGrid = ({ pictures }: { pictures: any }) => {
     )
 };
 
+// Definindo o componente Loading, que só será renderizado caso não haja imagens para renderizar.
 const Loading = () => {
     return <div className='ui-gallery-loader'><Loader.Root /></div>
 };
 
+// Exportação do Componente Principal
 export { Root };

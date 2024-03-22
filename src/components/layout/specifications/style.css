@@ -3,8 +3,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 25px;
-    padding: 30px 0px;
+    gap: 30px;
+    padding: 60px 0px;
 }
 
 .ui-specifications-background {
@@ -17,13 +17,14 @@
 }
 
 .ui-specifications-content {
-    width: 100%;
+    width: 85%;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
 }
 
 .ui-specifications-content p {
+    width: 50%;
     color: var(--content-sub-primary);
 }
 
