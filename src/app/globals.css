@@ -1,83 +1,69 @@
-:root {
-  /* 
-    Design Systems 
-    KOS UI
+@tailwind base;
+  @tailwind components;
+  @tailwind utilities;
 
-    UI Content
-  */
-  --content-constant: #FFFFFF;
-  --content-primary: #212529;
-  --content-sub-primary: rgba(33, 37, 41, 0.72);
-  --content-secondary: rgba(33, 37, 41, 0.52);
-  --content-disabled: rgba(33, 37, 41, 0.28);
-  --content-border: rgba(33, 37, 41, 0.12);
-  --content-background: rgba(33, 37, 41, 0.04);
+  @layer base {
+    :root {
+      --background: 0 0% 100%;
+      --foreground: 0 0% 3.9%;
+      --card: 0 0% 100%;
+      --card-foreground: 0 0% 3.9%;
+      --popover: 0 0% 100%;
+      --popover-foreground: 0 0% 3.9%;
+      --primary: 0 0% 9%;
+      --primary-foreground: 0 0% 98%;
+      --secondary: 0 0% 96.1%;
+      --secondary-foreground: 0 0% 9%;
+      --muted: 0 0% 96.1%;
+      --muted-foreground: 0 0% 45.1%;
+      --accent: 0 0% 96.1%;
+      --accent-foreground: 0 0% 9%;
+      --destructive: 0 84.2% 60.2%;
+      --destructive-foreground: 0 0% 98%;
+      --border: 0 0% 89.8%;
+      --input: 0 0% 89.8%;
+      --ring: 0 0% 3.9%;
+      --radius: 0.5rem;
+      --chart-1: 12 76% 61%;
+      --chart-2: 173 58% 39%;
+      --chart-3: 197 37% 24%;
+      --chart-4: 43 74% 66%;
+      --chart-5: 27 87% 67%;
+    }
 
-  /* 
-    UI Accent
-  */
-  --accent-primary: #2A83F2;
-  --accent-sub-primary: rgba(42, 131, 242, 0.72);
-  --accent-secondary: rgba(42, 131, 242, 0.52);
-  --accent-disabled: rgba(42, 131, 242, 0.28);
-  --accent-border: rgba(42, 131, 242, 0.2);
-  --accent-background: rgba(42, 131, 242, 0.12);
+    .dark {
+      --background: 0 0% 3.9%;
+      --foreground: 0 0% 98%;
+      --card: 0 0% 3.9%;
+      --card-foreground: 0 0% 98%;
+      --popover: 0 0% 3.9%;
+      --popover-foreground: 0 0% 98%;
+      --primary: 0 0% 98%;
+      --primary-foreground: 0 0% 9%;
+      --secondary: 0 0% 14.9%;
+      --secondary-foreground: 0 0% 98%;
+      --muted: 0 0% 14.9%;
+      --muted-foreground: 0 0% 63.9%;
+      --accent: 0 0% 14.9%;
+      --accent-foreground: 0 0% 98%;
+      --destructive: 0 62.8% 30.6%;
+      --destructive-foreground: 0 0% 98%;
+      --border: 0 0% 14.9%;
+      --input: 0 0% 14.9%;
+      --ring: 0 0% 83.1%;
+      --chart-1: 220 70% 50%;
+      --chart-2: 160 60% 45%;
+      --chart-3: 30 80% 55%;
+      --chart-4: 280 65% 60%;
+      --chart-5: 340 75% 55%;
+    }
+  }
 
-  /* 
-    UI System
-  */
-  --system-success-primary: #24CE9F;
-  --system-success-background: rgba(36, 206, 159, 0.16);
-  --system-error-primary: #F22A41;
-  --system-error-background: rgba(242, 42, 65, 0.16);
-  --system-warning-primary: #F2B325;
-  --system-warning-background: rgba(242, 179, 37, 0.16);
-
-  /* 
-    UI Background
-  */
-  --background-primary: #FFFFFF;
-  --background-secondary: #F7F8FA;
-  --background-modal: #FFFFFF;
-  --background-keyboard: #D8E0EB;
-  --overlay-dark: rgba(33, 37, 41, 0.72);
-  --overlay-light: rgba(33, 37, 41, 0.52);
-
-  /* 
-    UI Colors
-  */
-  --red: #F34257;
-  --green: #24CE9F;
-  --purple: #8C8CFF;
-  --orange: #F3BD3D;
-  --blue: #2A83F2;
-}
-
-
-::-webkit-scrollbar {
-  width: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--accent-primary);
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: var(--accent-secondary);
-}
-
-::selection {
-  color: var(--background-primary);
-  background: var(--content-primary);
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
+  @layer base {
+    * {
+      @apply border-border;
+    }
+    body {
+      @apply bg-background text-foreground;
+    }
+  }

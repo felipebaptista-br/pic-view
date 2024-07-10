@@ -1,9 +1,0 @@
-.home-page {
-    padding-top: 60px;
-}
-
-@media screen and (max-width: 1150px) {
-    .home-page {
-        padding-top: 80px;
-    }
-}

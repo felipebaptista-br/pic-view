@@ -1,9 +1,0 @@
-.details-page {
-    padding-top: 60px;
-}
-
-@media screen and (max-width: 1150px) {
-    .details-page {
-        padding-top: 80px;
-    }
-}
